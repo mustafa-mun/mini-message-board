@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+  h1= title
+  form(method="POST" action="/new")
+    label(for="author") User:
+    input(type="text" name="author" id="author" style="display:block; margin-bottom:15px;")
+
+    label(for="message") Message:
+    input(type="textarea" name="message" id="message" style="display:block; margin-bottom:15px")
+
+    input(type="submit" value="Submit" style="cursor:pointer;")
