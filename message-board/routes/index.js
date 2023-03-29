@@ -1,5 +1,5 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const indexRouter = express.Router();
 
 const messages = [
   { text: "Hi how are you ?", user: "Dane", added: new Date() },
@@ -7,11 +7,11 @@ const messages = [
 ];
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+indexRouter.get("/", function (req, res, next) {
   res.render("index", { title: "Mini Messageboard", messages });
 });
 
 module.exports = {
-  router,
+  indexRouter,
   messages,
 };
